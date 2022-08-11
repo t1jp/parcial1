@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titulo Pagina</title>
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <header class="estilo_bloque">
+        <img class="img-circulo" src="img/foto_perfil.jpg">
+        <p>Eduardo Amaya</p>
+
+        <nav class="align">
+            
+            <a href="#">Inicio</a>
+            <a href="#">PHP</a>
+            <a href="#">.Net</a>
+            <a href="#">Java</a>
+            
+        </nav>
+
+    </header>
+    <div class="estilo_bloque">
+        <h3>Lenguajes de Programación</h3>
+			<ol type="1" start="1"> <!-- LISTA ORDENADA  -->
+				<li >Paginas Web</li>
+					<ul class="vi2"> <!-- VIÑETAS  -->
+						<li>Jsp</li>
+						<li>Aspx</li>
+						<li>Php</li>
+					</ul>
+				<li>Aplicaciones</li>
+					<ul class="vi1">
+						<li>Java</li>
+						<li>Visual Basic</li>
+						<li>C#</li>
+					</ul>
+			</ol>
+    </div>
+    
+    <div class="estilo_bloque">
+        <form>
+            <input type="text" name="txt_nombres" id="txt_nombres" placeholder="Ingrese Nombre" required>
+            <input type="text" name="txt_apellidos" id="txt_apellidos" placeholder="Ingrese Apellido" required>
+            <input type="number" name="txt_telefono" id="txt_telefono" placeholder="Ingrese Telefono" required>
+            <input type="email" name="txt_email" id="txt_email" placeholder="Ingrese Email" required>
+            <input type="date" name="txt_fn" id="txt_fn" placeholder="Ingrese Fecha" required>
+            <textarea name="text_direccion" id="text_direccion" placeholder="Ingrese la Direccion"></textarea>
+            <input type="submit" class="boton" onclick="btn_enviar()" value="Enviar">
+        </form>
+    </div>
+    <div class="estilo_bloque" id="redes_sociales">
+        <h3>Redes Sociales</h3>
+        <a href="#"><img src="img/facebook.png"></a>
+        <a href="#"><img src="img/twitter.png"></a>
+    </div>
+    <script>
+        function btn_enviar(){
+            var nombres = document.getElementById("txt_nombres").value;
+            var apellidos = document.getElementById("txt_apellidos").value;
+            var telefono = document.getElementById("txt_telefono").value;
+            var email = document.getElementById("txt_email").value;
+            var date = document.getElementById("txt_fn").value;
+            var direccion = document.getElementById("text_direccion").value;
+            alert(nombres + "\n" + apellidos + "\n" + telefono + "\n" + email + "\n" + date + "\n" + direccion);
+        }
+    </script>
+</body>
+</html>
